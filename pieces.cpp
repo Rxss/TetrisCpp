@@ -1,6 +1,9 @@
 // Ross A
 // 19/07/2025
 
+
+#include "pieces.h"
+
 char pieces[7 /*kind */][4 /* rotation */][5 /* horizontal blocks */][5 /* vertical blocks */] =
 {
 	// Square
@@ -277,3 +280,18 @@ int piecesInitialPosition[7 /*kind */][4 /* r2otation */][2 /* position */] =
 	{-2, -2}
 	},
 };
+
+int Pieces::GetBlockType(int piece, int rotation, int x, int y)
+{
+	return pieces[piece][rotation][x][y];
+}
+
+int Pieces::GetXInitialPosition(int piece, int rotation)
+{
+	return piecesInitialPosition[piece][rotation][0];
+}
+
+int Pieces::GetYInitialPosition(int piece, int rotation)
+{
+	return piecesInitialPosition[piece][rotation][1];
+}
