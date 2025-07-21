@@ -19,17 +19,17 @@ public:
 	int piece, rotation; // Kind and rotation of the falling piece
 
 private:
-	int mScreenHeight; // Screen height in pixels
-	int mNextPosX, mNextPosY; // Position of the next piece
-	int mNextPiece, mNextRotation; // Kind and rotation of the next piece
+	int screenHeight; // Screen height in pixels
+	int nextPosX, nextPosY; // Position of the next piece
+	int nextPiece, nextRotation; // Kind and rotation of the next piece
 
-	Board* mBoard;
-	Pieces* mPieces;
-	IO* mIO;
+	Board* board;
+	Pieces* pieces;
+	IO* IO;
 
-	int GetRand(int pA, int pB);
+	int GetRand(int a, int b);
 	void InitGame();
-	void DrawPiece(int pX, int pY, int pPiece, int pRotation);
+	void DrawPiece(int x, int y, int piece, int rotation);
 	void DrawBoard();
 };
 
